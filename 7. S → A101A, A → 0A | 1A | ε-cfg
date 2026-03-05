@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    if(strstr(str, "101") != NULL)
+        printf("Accepted\n");
+    else
+        printf("Rejected\n");
+
+    return 0;
+}
