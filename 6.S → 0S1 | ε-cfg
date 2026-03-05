@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int i, zeros = 0, ones = 0;
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    int len = strlen(str);
+
+    // count starting zeros
+    for(i = 0; str[i] == '0'; i++)
+        zeros++;
+
+    // count ending ones
+    for(i = len-1; str[i] == '1'; i--)
+        ones++;
+
+    if(zeros == ones && zeros + ones == len)
+        printf("Accepted\n");
+    else
+        printf("Rejected\n");
+
+    return 0;
+}
